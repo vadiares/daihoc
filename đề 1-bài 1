@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace de1_bai1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Tinh diem trung binh mon hoc, xep loai hoc luc");
+            string tenSV;
+            double diemToan, diemLy, diemHoa, diemTB;
+            Console.Write("Nhap ten sinh vien: ");
+            tenSV = Convert.ToString(Console.ReadLine());
+            Console.Write("Nhap diem toan: ");
+            diemToan = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Nhap diem ly: ");
+            diemLy = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Nhap diem hoa: ");
+            diemHoa = Convert.ToDouble(Console.ReadLine());
+            diemTB = (diemToan + diemLy + diemHoa) / 3;
+            Console.WriteLine("Diem trung binh mon hoc cua sinh vien {0} la: {1}", tenSV, diemTB);
+            Console.WriteLine("Xep loai hoc luc: ");
+            if (diemTB >= 8)
+            {
+                Console.WriteLine("Gioi");
+            }
+            else if (diemTB >= 6.5)
+            {
+                Console.WriteLine("Kha");
+            }
+            else if (diemTB >= 5)
+            {
+                Console.WriteLine("Trung binh");
+            }
+            else
+            {
+                Console.WriteLine("Yeu");
+            }
+            Console.ReadKey();
+        }
+    }
+}
